@@ -5,10 +5,30 @@ import 'font-awesome/css/font-awesome.css'
 import './App.css'
 import { v4 } from 'node-uuid'
 import TodoList from '../TodoList'
+import { findIndex } from 'lodash'
 
 class App extends Component {
-  render () {
-    const Todos = [
+
+  onTodoClick = (event) => {
+    event.preventDefault()
+    const todoId = event.target.id
+    const todoIndex = findIndex(this.state.todos, {id: todoId})
+    const todo = this.state.todos[todoIndex]
+    const newTodos = [
+      ...this.state.todos.slice(0, todoIndex),
+      {
+        ...todo,
+        completed: !todo.completed
+      },
+      ...this.state.todos.slice(todoIndex + 1),
+    ]
+    this.setState(prevState => ({
+      todos: newTodos
+    }))
+  }
+
+  state = {
+    todos: [
       {
         id: v4(),
         name: 'Learn React',
@@ -25,7 +45,9 @@ class App extends Component {
         completed: false
       },
     ]
-    console.log('Todos', Todos)
+  }
+
+  render () {
     return (
       <div className='App'>
         <div className='App-header'>
@@ -35,7 +57,7 @@ class App extends Component {
         <p className='App-intro'>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <TodoList todos={Todos}/>
+        <TodoList todos={this.state.todos} onTodoClick={this.onTodoClick}/>
       </div>
     )
   }

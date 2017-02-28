@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import './Todo.css'
 
 
-const Todo = ({ todo }) => {
+const Todo = ({ todo, onTodoClick }) => {
   const todoClasses = classnames(
     'panel',
     'panel-default',
@@ -13,7 +13,7 @@ const Todo = ({ todo }) => {
   )
   return (
     <div className={todoClasses}>
-      <div className="panel-body">
+      <div className="panel-body" id={todo.id} onClick={onTodoClick}>
         {todo.name}
       </div>
     </div>
