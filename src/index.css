@@ -3,3 +3,131 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.az-btn {
+  min-width: 170px;
+  max-height: 34px;
+}
+
+.\+display-flex {
+  display: flex;
+}
+
+.\+flex-row {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.\+flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.\+flex-ends {
+  display: flex;
+  justify-content: space-between;
+}
+
+.\+flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.\+flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.\+flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.\+flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.\+flex-bottom {
+  display: flex;
+  align-items: flex-end;
+}
+
+.\+padding-0 {
+  padding: 0px;
+}
+
+.\+padding-xsmall {
+  padding: 4px;
+}
+
+.\+padding-small {
+  padding: 10px;
+}
+
+.\+padding-medium {
+  padding: 16px;
+}
+
+.\+margin-xsmall {
+  margin: 4px;
+}
+
+.\+margin-small {
+  margin: 10px;
+}
+
+.\+margin-bottom-small {
+  margin-bottom: 10px;
+}
+
+.\+margin-sides-small {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.\+font-weight-500 {
+  font-weight: 500;
+}
+
+.\+flex-1 {
+  flex: 1;
+}
+
+.\+flex-2 {
+  flex: 2;
+}
+
+.\+flex-3 {
+  flex: 3;
+}
+
+.\+flex-4 {
+  flex: 4;
+}
+
+.\+flex-5 {
+  flex: 5;
+}
+
+.\+flex-6 {
+  flex: 6;
+}
+
+.\+flex-7 {
+  flex: 7;
+}
+
+.\+flex-8 {
+  flex: 8;
+}
+
+.\+height-100 {
+  height: 100%;
+}
