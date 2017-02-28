@@ -3,8 +3,8 @@ import logo from './logo.svg'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'font-awesome/css/font-awesome.css'
 import './App.css'
-import Todo from '../Todo'
 import { v4 } from 'node-uuid'
+import TodoList from '../TodoList'
 
 class App extends Component {
   render () {
@@ -25,6 +25,7 @@ class App extends Component {
         completed: false
       },
     ]
+    console.log('Todos', Todos)
     return (
       <div className='App'>
         <div className='App-header'>
@@ -34,13 +35,7 @@ class App extends Component {
         <p className='App-intro'>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <div className="container">
-          {Todos.map((todo) => {
-            return (
-              <Todo key={todo.id} todo={todo} />
-            )
-          })}
-        </div>
+        <TodoList todos={Todos}/>
       </div>
     )
   }

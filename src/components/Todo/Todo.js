@@ -21,9 +21,11 @@ const Todo = ({ todo }) => {
 }
 
 Todo.propTypes = {
-  id: PropTypes.string,
-  name: PropTypes.string,
-  completed: PropTypes.bool
+  todo: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired
+  })
 }
 
 export default Todo
