@@ -17,7 +17,7 @@ class App extends Component {
       {
         id: v4(),
         name: 'Do something awesome',
-        completed: false
+        completed: true
       },
       {
         id: v4(),
@@ -34,11 +34,13 @@ class App extends Component {
         <p className='App-intro'>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        {Todos.map((todo) => {
-          return (
-            <Todo todo={todo} />
-          )
-        })}
+        <div className="container">
+          {Todos.map((todo) => {
+            return (
+              <Todo key={todo.id} todo={todo} />
+            )
+          })}
+        </div>
       </div>
     )
   }
